@@ -7,9 +7,9 @@ from streamlit_autorefresh import st_autorefresh
 # Auto-refresh every 5 minutes (300000 ms)
 st_autorefresh(interval=300000, key="data_refresh")
 
-st.title("Oil & Gas Futures Dashboard (15m interval)")
+st.title("Oil & Gas Futures Dashboard - 15-Min Futures Prices & Volatility")
 
-tickers = ("CL=F", "BZ=F", "NG=F")
+tickers = ("CL=F", "BZ=F", "NG=F","RB=F")
 futures_data = yf.download(tickers, period="5d", interval="15m")
 
 close_data = futures_data["Close"]
@@ -27,7 +27,6 @@ for col in close_data.columns:
 st.subheader("Daily % Change")
 st.write(pd.Series(daily_change).map("{:.2f}%".format))
 
-# Step 4: Volume
 st.subheader("Latest Volume & 15-day Average")
 volume_data = futures_data["Volume"]
 latest_volume = volume_data.iloc[-1]
@@ -39,7 +38,7 @@ volumes = pd.DataFrame({
 })
 st.write(volumes)
 
-st.subheader("Rolling Volatility (1 trading day ≈ 26 x 15m bars)")
+st.subheader("Rolling Volatility - 1 trading day")
 returns = np.log(close_data / close_data.shift(1))
 
 rolling_vol = returns.rolling(window=26).std() * np.sqrt(252)
