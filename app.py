@@ -1,4 +1,3 @@
-```python  
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -56,5 +55,5 @@ for col in rolling_vol.columns:
 st.subheader("Price Charts (last 5 days)")
 for col in close_data.columns:
     st.line_chart(close_data[col], height=250)
-```
+
 
