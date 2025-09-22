@@ -22,5 +22,3 @@ Using this dashboard, users can:
 - Quickly identify which commodity is moving most intraday.  
 - Detect periods of high volatility that may present trading opportunities.  
 - Compare trading volumes to monitor liquidity trends.  
-- Observe correlations or divergences between WTI and Brent prices.  
-
