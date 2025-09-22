@@ -3,7 +3,7 @@ A dynamic dashboard built in Python and Streamlit that visualizes live intraday 
 
 ## Features
 
-- Pulls live intraday data for **WTI (CL=F)**, **Brent (BZ=F)**, and **Natural Gas (NG=F)** at a 10-minute interval.  
+- Pulls live intraday data for **WTI (CL=F)**, **Brent (BZ=F)**, **RBOB Gasoline (RB=F)** and **Natural Gas (NG=F)** at a 15-minute interval.  
 - Calculates **daily % change** since market open.  
 - Computes **rolling volatility** to measure market risk.  
 - Shows **latest and average trading volume** for each commodity.  
