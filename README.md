@@ -11,7 +11,7 @@ A dynamic dashboard built in Python and Streamlit that visualizes live intraday 
   - Price chart  
   - Rolling volatility chart  
   - Trading volume chart  
-- 'Auto-refresh' every 10 minutes for live updates.  
+- 'Auto-refresh' every 15 minutes for live updates.  
 
 ---
 
